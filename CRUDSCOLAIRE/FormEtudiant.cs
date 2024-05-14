@@ -50,8 +50,60 @@ namespace CRUDSCOLAIRE
 
         private void bntupdate_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridEtudiant.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner un étudiant à mettre à jour.");
+                return;
+            }
+
+            // Récupérer l'ID de l'étudiant sélectionné dans le DataGridView
+            int selectedStudentId = (int)dataGridEtudiant.SelectedRows[0].Cells["Id"].Value;
+
+            // Récupérer l'étudiant correspondant dans la base de données
+            Etudiant etudiant = context.Etudiant.FirstOrDefault(et => et.id == selectedStudentId);
+
+            if (etudiant != null)
+            {
+                // Valider les données du formulaire
+                if (!IsValidUpdate()) return;
+
+                try
+                {
+                    // Mettre à jour les détails de l'étudiant
+                    etudiant.nom = txtnom.Text;
+                    etudiant.prenom = txtprenom.Text;
+                    etudiant.credit = int.Parse(txtcredit.Text);
+                    etudiant.reglement = int.Parse(txtreglement.Text);
+                    etudiant.anneescol = txtannee.Text;
+                    etudiant.idClasse = Convert.ToInt32(cmbclasse.SelectedValue);
+
+                    context.SaveChanges();
+                    MessageBox.Show("Étudiant mis à jour avec succès !");
+                    RefreshData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erreur lors de la mise à jour de l'étudiant : {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Étudiant non trouvé dans la base de données.");
+            }
         }
+
+        private bool IsValidUpdate()
+        {
+            return !string.IsNullOrWhiteSpace(txtnom.Text) &&
+                   !string.IsNullOrWhiteSpace(txtprenom.Text) &&
+                   !string.IsNullOrWhiteSpace(txtcredit.Text) &&
+                   !string.IsNullOrWhiteSpace(txtreglement.Text) &&
+                   !string.IsNullOrWhiteSpace(txtannee.Text) &&
+                   cmbclasse.SelectedItem != null &&
+                   int.TryParse(txtcredit.Text, out _) &&
+                   int.TryParse(txtreglement.Text, out _);
+        }
+
 
         private void btndelete_Click(object sender, EventArgs e)
         {
