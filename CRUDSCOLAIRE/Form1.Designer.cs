@@ -32,6 +32,12 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.etudantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeClasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diagrammeEtuClasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diagrammeEtuAnneeScolaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +48,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.classeToolStripMenuItem,
-            this.etudantToolStripMenuItem});
+            this.etudantToolStripMenuItem,
+            this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -70,6 +77,51 @@
             this.etudantToolStripMenuItem.Text = "Etudant";
             this.etudantToolStripMenuItem.Click += new System.EventHandler(this.etudantToolStripMenuItem_Click);
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeClasseToolStripMenuItem,
+            this.listeToolStripMenuItem,
+            this.listeUtilisateurToolStripMenuItem,
+            this.diagrammeEtuClasseToolStripMenuItem,
+            this.diagrammeEtuAnneeScolaireToolStripMenuItem});
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // listeClasseToolStripMenuItem
+            // 
+            this.listeClasseToolStripMenuItem.Name = "listeClasseToolStripMenuItem";
+            this.listeClasseToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.listeClasseToolStripMenuItem.Text = "Liste Classe";
+            this.listeClasseToolStripMenuItem.Click += new System.EventHandler(this.listeClasseToolStripMenuItem_Click);
+            // 
+            // listeToolStripMenuItem
+            // 
+            this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
+            this.listeToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.listeToolStripMenuItem.Text = "Liste Etudiant";
+            this.listeToolStripMenuItem.Click += new System.EventHandler(this.listeToolStripMenuItem_Click);
+            // 
+            // listeUtilisateurToolStripMenuItem
+            // 
+            this.listeUtilisateurToolStripMenuItem.Name = "listeUtilisateurToolStripMenuItem";
+            this.listeUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.listeUtilisateurToolStripMenuItem.Text = "Liste Utilisateur";
+            this.listeUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.listeUtilisateurToolStripMenuItem_Click);
+            // 
+            // diagrammeEtuClasseToolStripMenuItem
+            // 
+            this.diagrammeEtuClasseToolStripMenuItem.Name = "diagrammeEtuClasseToolStripMenuItem";
+            this.diagrammeEtuClasseToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.diagrammeEtuClasseToolStripMenuItem.Text = "Diagramme Etu_Classe";
+            // 
+            // diagrammeEtuAnneeScolaireToolStripMenuItem
+            // 
+            this.diagrammeEtuAnneeScolaireToolStripMenuItem.Name = "diagrammeEtuAnneeScolaireToolStripMenuItem";
+            this.diagrammeEtuAnneeScolaireToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.diagrammeEtuAnneeScolaireToolStripMenuItem.Text = "Diagramme Etu_AnneeScolaire";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -91,6 +143,12 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem classeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem etudantToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeClasseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeUtilisateurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem diagrammeEtuClasseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem diagrammeEtuAnneeScolaireToolStripMenuItem;
     }
 }
 

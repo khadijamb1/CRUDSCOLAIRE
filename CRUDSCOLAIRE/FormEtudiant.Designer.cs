@@ -48,6 +48,7 @@
             this.txtSearchAnnee = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEtudiant)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.btnajout.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnajout.Location = new System.Drawing.Point(5, 518);
             this.btnajout.Name = "btnajout";
-            this.btnajout.Size = new System.Drawing.Size(246, 67);
+            this.btnajout.Size = new System.Drawing.Size(208, 67);
             this.btnajout.TabIndex = 15;
             this.btnajout.Text = "Enregistrer";
             this.btnajout.UseVisualStyleBackColor = false;
@@ -172,9 +173,9 @@
             this.bntupdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bntupdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntupdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bntupdate.Location = new System.Drawing.Point(385, 518);
+            this.bntupdate.Location = new System.Drawing.Point(245, 518);
             this.bntupdate.Name = "bntupdate";
-            this.bntupdate.Size = new System.Drawing.Size(234, 67);
+            this.bntupdate.Size = new System.Drawing.Size(183, 67);
             this.bntupdate.TabIndex = 27;
             this.bntupdate.Text = "Modifier";
             this.bntupdate.UseVisualStyleBackColor = false;
@@ -184,9 +185,9 @@
             // 
             this.btndelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.Location = new System.Drawing.Point(714, 518);
+            this.btndelete.Location = new System.Drawing.Point(505, 518);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(204, 67);
+            this.btndelete.Size = new System.Drawing.Size(166, 67);
             this.btndelete.TabIndex = 28;
             this.btndelete.Text = "Supprimer";
             this.btndelete.UseVisualStyleBackColor = false;
@@ -240,11 +241,24 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Recherche par annee";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(714, 518);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(204, 67);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Imprimer";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormEtudiant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 588);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearchAnnee);
@@ -295,5 +309,6 @@
         private System.Windows.Forms.TextBox txtSearchAnnee;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }

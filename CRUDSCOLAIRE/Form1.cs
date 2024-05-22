@@ -36,5 +36,23 @@ namespace CRUDSCOLAIRE
             FormUser formUser = new FormUser();
             formUser.Show();
         }
+
+        private void listeClasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClasseListe formClasseListe = new FormClasseListe();
+            formClasseListe.Show();
+        }
+
+        private void listeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEtudiantListe formEtudiantListe = new FormEtudiantListe();
+            formEtudiantListe.Show();
+        }
+
+        private void listeUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUserListe formUserListe = new FormUserListe();
+            formUserListe.Show();
+        }
     }
 }

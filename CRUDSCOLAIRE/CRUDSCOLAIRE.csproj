@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -59,6 +63,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +78,30 @@
   <ItemGroup>
     <Compile Include="Classe.cs">
       <DependentUpon>ModelS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportEtudiant_Liste.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportEtudiant_Liste.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportListeClass.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportListeClass.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportUser.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportUser.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Etudiant.cs">
       <DependentUpon>ModelS.tt</DependentUpon>
@@ -88,17 +118,59 @@
     <Compile Include="FormClasse.Designer.cs">
       <DependentUpon>FormClasse.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClasseListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClasseListe.Designer.cs">
+      <DependentUpon>FormClasseListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEtudiant.Designer.cs">
       <DependentUpon>FormEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEtudiantListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEtudiantListe.Designer.cs">
+      <DependentUpon>FormEtudiantListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportClasse.Designer.cs">
+      <DependentUpon>FormReportClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportEtudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportEtudiant.Designer.cs">
+      <DependentUpon>FormReportEtudiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportUser.Designer.cs">
+      <DependentUpon>FormReportUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserListe.Designer.cs">
+      <DependentUpon>FormUserListe.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelS.Context.cs">
       <AutoGen>True</AutoGen>
@@ -123,17 +195,54 @@
     <Compile Include="User.cs">
       <DependentUpon>ModelS.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportEtudiant_Liste.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportEtudiant_Liste.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportListeClass.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportListeClass.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportUser.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportUser.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClasse.resx">
       <DependentUpon>FormClasse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormClasseListe.resx">
+      <DependentUpon>FormClasseListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEtudiant.resx">
       <DependentUpon>FormEtudiant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEtudiantListe.resx">
+      <DependentUpon>FormEtudiantListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportClasse.resx">
+      <DependentUpon>FormReportClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportEtudiant.resx">
+      <DependentUpon>FormReportEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportUser.resx">
+      <DependentUpon>FormReportUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserListe.resx">
+      <DependentUpon>FormUserListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

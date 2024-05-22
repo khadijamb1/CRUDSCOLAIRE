@@ -42,10 +42,6 @@ namespace CRUDSCOLAIRE
             MessageBox.Show("Etudiant Ajouter !!");
             RefreshData();
 
-
-
-
-
         }
 
         private void bntupdate_Click(object sender, EventArgs e)
@@ -56,20 +52,19 @@ namespace CRUDSCOLAIRE
                 return;
             }
 
-            // Récupérer l'ID de l'étudiant sélectionné dans le DataGridView
+          
             int selectedStudentId = (int)dataGridEtudiant.SelectedRows[0].Cells["Id"].Value;
 
-            // Récupérer l'étudiant correspondant dans la base de données
+            
             Etudiant etudiant = context.Etudiant.FirstOrDefault(et => et.id == selectedStudentId);
 
             if (etudiant != null)
             {
-                // Valider les données du formulaire
                 if (!IsValidUpdate()) return;
 
                 try
                 {
-                    // Mettre à jour les détails de l'étudiant
+                   
                     etudiant.nom = txtnom.Text;
                     etudiant.prenom = txtprenom.Text;
                     etudiant.credit = int.Parse(txtcredit.Text);
@@ -89,6 +84,7 @@ namespace CRUDSCOLAIRE
             else
             {
                 MessageBox.Show("Étudiant non trouvé dans la base de données.");
+                RefreshData();
             }
         }
 
@@ -182,6 +178,13 @@ namespace CRUDSCOLAIRE
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          FormReport formReport = new FormReport();
+            formReport.Show();
+          
         }
     }
 }
